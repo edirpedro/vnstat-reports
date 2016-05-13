@@ -1,0 +1,31 @@
+
+.center { text-align: center; }
+.right { text-align: right; }
+
+.nav-tabs { margin-top: 3em; margin-bottom: 20px; }
+
+h2 { text-align: center; }
+
+canvas { margin: 20px 0; }
+
+.table th.number { width: 40px; }
+.table th.receive,
+.table th.sent,
+.table th.total { width: 20%; }
+.table > tfoot > tr:first-child > th,
+.table > tfoot > tr:first-child > td { border-top-width: 2px; }
+
+#summary .col-sm-4 { text-align: center; }
+#summary canvas { margin: 1em; xmax-width: 100px; height: auto !important; }
+#summary dt,
+#summary dd { display: inline-block; width: 50%; }
+#summary dt { text-align: right; padding-right: 3px; }
+#summary dd { text-align: left; padding-left: 3px; }
+#summary .color-received,
+#summary .color-sent { display: inline-block; width: 20px; margin: 5px; }
+#summary .color-received { background: #337ab7; }
+#summary .color-sent { background: #265a88; }
+
+/* Ideia para usar o fundo da célula Rx e Tx como gráfico
+background: -webkit-linear-gradient(right, #eee 0%,#eee 20%,rgba(255,255,255,0) 20%,rgba(255,255,255,0) 100%);
+*/
