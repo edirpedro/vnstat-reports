@@ -178,8 +178,7 @@ $traffic = $interface->traffic;
 						<?php
 						$labels = $rx = $tx = array();
 						$hours = $traffic->hours;
-						krsort($hours);
-						foreach($hours as $hour) {
+						foreach(array_reverse($hours) as $hour) {
 							$labels[] = get_hour($hour);
 							$rx[] = $hour->rx;
 							$tx[] = $hour->tx;
@@ -226,9 +225,7 @@ $traffic = $interface->traffic;
 					<script>
 						<?php
 						$labels = $rx = $tx = array();
-						$days = $traffic->days;
-						krsort($days);
-						foreach($days as $day) {
+						foreach(array_reverse($traffic->days) as $day) {
 							$labels[] = $day->date->day;
 							$rx[] = $day->rx;
 							$tx[] = $day->tx;
@@ -302,9 +299,7 @@ $traffic = $interface->traffic;
 					<script>
 						<?php
 						$labels = $rx = $tx = array();
-						$months = $traffic->months;
-						krsort($months);
-						foreach($months as $month) {
+						foreach(array_reverse($traffic->months) as $month) {
 							$labels[] = strftime('%B', mktime(0, 0, 0, $month->date->month, 1, $month->date->year));
 							$rx[] = $month->rx;
 							$tx[] = $month->tx;

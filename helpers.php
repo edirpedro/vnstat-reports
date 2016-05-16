@@ -289,6 +289,10 @@ function get_summary($traffic) {
 		$result->today->cx = $yesterday - $today;
 		$result->yesterday->cx = 0;
 	}
+	if($today == 0 && $yesterday == 0) {
+		$result->today->cx = 100;
+		$result->yesterday->cx = 100;
+	}
 	
 	// This Month
 	if(!empty($traffic->months[0])) {
@@ -311,6 +315,10 @@ function get_summary($traffic) {
 	} else {
 		$result->month->cx = $last_month - $month;
 		$result->last_month->cx = 0;
+	}
+	if($month == 0 && $last_month == 0) {
+		$result->month->cx = 100;
+		$result->last_month->cx = 100;
 	}
 
 	return $result;
