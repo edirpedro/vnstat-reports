@@ -5,7 +5,7 @@ This tool is a web interface to see the reports from vnStat. The features includ
 
 ## Requirements
 
-* [vnStat](http://humdi.net/vnstat/)
+* [vnStat 1.14+](http://humdi.net/vnstat/)
 * PHP Web Server
 
 ## Interface

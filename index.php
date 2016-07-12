@@ -379,7 +379,8 @@ $traffic = $interface->traffic;
 			
 			<p>&nbsp;</p>
 			<hr>
-			<p class="center"><a href="https://github.com/edirpedro/vnstat-reports" target="_blank">vnStat Reports</a></p>
+			<p class="center"><a href="https://github.com/edirpedro/vnstat-reports" target="_blank">vnStat Reports 1.0</a><br>
+			<?php the_vnstat_version() ?></p>
 			<p>&nbsp;</p>
 			
 		</div>

@@ -35,7 +35,10 @@ function get_interface($interface) {
 	global $config;
 	
 	$interface = $interface == 'all' ? join('+', array_keys($config->interfaces)) : $interface;
-	$result = json_decode(exec($config->vnstat . " --json -i $interface"));
+	$result = exec($config->vnstat . " --json -i $interface");
+	if(!is_json($result))
+		die("Could not load JSON data from vnStat ($result)");
+	$result = json_decode($result);
 
 	// Traffic	
 	$data = $result->interfaces[0];
@@ -220,6 +223,12 @@ function is_interface($id) {
 	echo $_GET['interface'] == $id ? 'btn-primary' : 'btn-default';
 }
 
+// Check if is a JSON string
+function is_json($string) {
+	json_decode($string);
+	return json_last_error() == JSON_ERROR_NONE;
+}
+
 // Write the Updates time for each interface
 function the_interfaces_updates() {
 	global $config;
@@ -322,6 +331,13 @@ function get_summary($traffic) {
 	}
 
 	return $result;
+}
+
+// Echo the vnStat version
+function the_vnstat_version() {
+	global $config;
+	$version = exec($config->vnstat . ' -v');
+	echo '<a href="https://github.com/vergoh/vnstat" target="_blank">' . $version . '</a>';
 }
 
 ?>
