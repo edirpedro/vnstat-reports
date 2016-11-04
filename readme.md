@@ -1,7 +1,7 @@
 
 # vnStat Reports
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=59LH5AHNQ8XZW)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S3LJ44E4W8HRJ)
 
 This tool is a web interface to see the reports from vnStat. The features include the reports for a single interface connection and the reports that includes the sum of all the interfaces values. If you use both Cable and Wi-Fi connection on your notebook like me, you can see the total of traffic in all your connections.
 
